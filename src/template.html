@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Research Log</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <style>
+      :root {
+        --pico-font-family: "Inter", -apple-system, sans-serif;
+        --pico-background-color: #0a0a0a;
+        --pico-color: #ededed;
+        --border-subtle: rgba(255, 255, 255, 0.1);
+        --bg-surface: rgba(255, 255, 255, 0.03);
+        --text-muted: #a1a1aa;
+        --accent-glow: rgba(0, 255, 170, 0.15); 
+        --accent-border: #00ffaa;
+      }
+
+      body {
+        background-color: var(--pico-background-color);
+        color: var(--pico-color);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      main.container {
+        max-width: 760px;
+        padding-top: 3rem;
+        padding-bottom: 5rem;
+      }
+
+      /* Developer Typography Elements */
+      .eyebrow, nav a, code {
+        font-family: "JetBrains Mono", "Fira Code", monospace;
+        letter-spacing: 0.05em;
+      }
+
+      nav {
+        margin-bottom: 4rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid var(--border-subtle);
+      }
+
+      nav a {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+      }
+
+      nav a:hover { color: #fff; }
+
+      h1, h2, h3 { color: #fff; font-weight: 600; }
+      p, li { color: #d4d4d8; line-height: 1.7; }
+      
+      a {
+        text-decoration-color: var(--border-subtle);
+        text-underline-offset: 0.2em;
+        color: #fff;
+      }
+
+      pre {
+        padding: 1.25rem;
+        border: 1px solid var(--border-subtle);
+        border-radius: 8px;
+        background: #111;
+        overflow-x: auto;
+      }
+
+      /* Layouts & Cards */
+      .eyebrow {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+
+      .featured-card {
+        padding: 2rem;
+        border-radius: 12px;
+        background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0) 100%);
+        border: 1px solid var(--border-subtle);
+      }
+
+      .post-list {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        gap: 1rem;
+      }
+
+      .post-card {
+        padding: 1.5rem;
+        border-radius: 12px;
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        transition: all 0.2s ease;
+      }
+
+      .post-card h2 { margin: 0; font-size: 1.25rem; }
+      .post-card a { text-decoration: none; }
+
+      /* Micro-interactions */
+      .post-card:hover, .featured-card:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: var(--accent-border);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px var(--accent-glow);
+      }
+
+      /* About Section */
+      .section-divider { margin: 4rem 0 3rem; border: none; height: 1px; background: var(--border-subtle); }
+      .about-header { display: flex; gap: 1.5rem; }
+      
+      .avatar {
+        width: 64px; height: 64px; border-radius: 50%;
+        background: #fff; color: #000;
+        display: grid; place-items: center;
+        font-size: 1.5rem; font-weight: 700; flex-shrink: 0;
+      }
+
+      .link-row { display: flex; gap: 1rem; margin-top: 1rem; }
+      .link-row a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
+      .link-row a:hover { color: var(--accent-border); }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <nav>
+        <a href="index.html">← /root/home</a>
+      </nav>
+      
+      <div>
+        {{CONTENT}}
+      </div>
+
+      <hr class="section-divider" />
+      <section class="about-section">
+        <div class="about-header">
+          <div class="avatar">B</div>
+          <div>
+            <p class="eyebrow">System Admin</p>
+            <p>Computer science student focused on mastering data structures, backend Java development, and exploring machine learning.</p>
+            <div class="link-row">
+              <a href="#">GitHub</a>
+              <a href="#">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
