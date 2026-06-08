@@ -14,7 +14,7 @@ A minimal, custom Static Site Generator (SSG) designed for publishing technical 
 
 ---
 
-## 📁 Repository Structure
+## 📁 Repo Structure
 
 ```text
 ├── dist/                  # The compiled static website (served files)
